@@ -43,6 +43,7 @@
             this.новаГраToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.відмінитиХідToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вихідToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.flowLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -176,29 +177,37 @@
             // новаГраToolStripMenuItem
             // 
             this.новаГраToolStripMenuItem.Name = "новаГраToolStripMenuItem";
-            this.новаГраToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.новаГраToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.новаГраToolStripMenuItem.Text = "Нова гра";
             this.новаГраToolStripMenuItem.Click += new System.EventHandler(this.новаГраToolStripMenuItem_Click);
             // 
             // відмінитиХідToolStripMenuItem
             // 
             this.відмінитиХідToolStripMenuItem.Name = "відмінитиХідToolStripMenuItem";
-            this.відмінитиХідToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.відмінитиХідToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.відмінитиХідToolStripMenuItem.Text = "Відмінити хід";
             this.відмінитиХідToolStripMenuItem.Click += new System.EventHandler(this.відмінитиХідToolStripMenuItem_Click);
             // 
             // вихідToolStripMenuItem
             // 
             this.вихідToolStripMenuItem.Name = "вихідToolStripMenuItem";
-            this.вихідToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.вихідToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.вихідToolStripMenuItem.Text = "Вихід";
             this.вихідToolStripMenuItem.Click += new System.EventHandler(this.вихідToolStripMenuItem_Click);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(109, 2);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(204, 22);
+            this.progressBar1.TabIndex = 2;
             // 
             // TicTacToe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(317, 291);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -230,6 +239,7 @@
         private System.Windows.Forms.ToolStripMenuItem новаГраToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem відмінитиХідToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem вихідToolStripMenuItem;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 

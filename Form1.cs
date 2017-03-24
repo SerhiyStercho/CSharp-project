@@ -14,11 +14,13 @@ namespace TicTacToe
     
     public partial class TicTacToe : Form
     {
+        ProgressBar stepBar;
         ArrayList lastStep = new ArrayList();
         List<Button> list = new List<Button>();
         Button[] buttons=new Button[10];
         Button lastButton;
         private bool sign = true;
+        int size;
         public TicTacToe()
         {
             InitializeComponent();
@@ -31,6 +33,10 @@ namespace TicTacToe
             buttons[7] = button7;
             buttons[8] = button8;
             buttons[9] = button9;
+            progressBar1.Maximum = 9;
+            progressBar1.Step = 1;
+            progressBar1.Value = 0;
+            size = 0;
 
         }
        
@@ -92,6 +98,8 @@ namespace TicTacToe
 
         private void changeSign(Button selectedButton)
         {
+            size++;
+            progressBar1.Value = size;
             lastButton = selectedButton;
             list.Add(selectedButton);
             selectedButton.Text = "X";
@@ -118,6 +126,8 @@ namespace TicTacToe
 
         private void новаГраToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            size = 0;
+            progressBar1.Value = size;
             sign = true;
             for (int i=1;i<=9;i++) {
                 buttons[i].Enabled = true;
@@ -134,6 +144,8 @@ namespace TicTacToe
                 list[list.Count - 1].Text = "";
                 list.RemoveAt(list.Count - 1);
                 sign = !sign;
+                size--;
+                progressBar1.Value = size;
             }
             
         }
